@@ -29,7 +29,7 @@ public class Conexion {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+     
     public synchronized static Conexion getInstance(){
         
         if(instance == null){
