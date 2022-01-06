@@ -10,7 +10,7 @@ public class FrmLogin extends javax.swing.JFrame {
     
     public FrmLogin() {
         initComponents();
-        setTitle("INVENTARIO BOTICA CRUZ DE MAYO - JAUJA");
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
         this.setSize(920, 615);
         setResizable(false);
         
@@ -40,7 +40,7 @@ public class FrmLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBase.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBase.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelCentral.setBackground(new java.awt.Color(255, 255, 255));

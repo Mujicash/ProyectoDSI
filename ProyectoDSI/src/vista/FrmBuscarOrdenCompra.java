@@ -16,8 +16,9 @@ public class FrmBuscarOrdenCompra extends javax.swing.JFrame {
      */
     public FrmBuscarOrdenCompra() {
         initComponents();
-        setTitle("BUSCAR ORDEN DE COMPRA");
-        setSize(910, 655);
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
+        setSize(1193, 660);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -32,10 +33,16 @@ public class FrmBuscarOrdenCompra extends javax.swing.JFrame {
 
         jPanelBaseBusOrdenCompra = new javax.swing.JPanel();
         jPanelRetPrincipal2 = new javax.swing.JPanel();
+        jTextFieldNomProveedor = new javax.swing.JTextField();
+        jLabelBusOrdenCompra = new javax.swing.JLabel();
+        jLabelNomProveedor = new javax.swing.JLabel();
+        jButtonBusOrdenCompra = new javax.swing.JButton();
+        jScrollPaneBusOrdCompra = new javax.swing.JScrollPane();
+        jTableBusOrdCompra = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBaseBusOrdenCompra.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBaseBusOrdenCompra.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBaseBusOrdenCompra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRetPrincipal2.setBackground(new java.awt.Color(0, 0, 51));
@@ -49,24 +56,80 @@ public class FrmBuscarOrdenCompra extends javax.swing.JFrame {
         jPanelRetPrincipal2.setLayout(jPanelRetPrincipal2Layout);
         jPanelRetPrincipal2Layout.setHorizontalGroup(
             jPanelRetPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
         jPanelRetPrincipal2Layout.setVerticalGroup(
             jPanelRetPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        jPanelBaseBusOrdenCompra.add(jPanelRetPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 510, 80, 70));
+        jPanelBaseBusOrdenCompra.add(jPanelRetPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 550, 50, 40));
+
+        jTextFieldNomProveedor.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldNomProveedor.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldNomProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseBusOrdenCompra.add(jTextFieldNomProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 440, 40));
+
+        jLabelBusOrdenCompra.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabelBusOrdenCompra.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelBusOrdenCompra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelBusOrdenCompra.setText("BUSCAR ORDEN DE COMPRA");
+        jPanelBaseBusOrdenCompra.add(jLabelBusOrdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 410, -1));
+
+        jLabelNomProveedor.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        jLabelNomProveedor.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelNomProveedor.setText("NOMBRE DEL PROVEEDOR:");
+        jPanelBaseBusOrdenCompra.add(jLabelNomProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 260, -1));
+
+        jButtonBusOrdenCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonBusOrdenCompra.setText("BUSCAR");
+        jPanelBaseBusOrdenCompra.add(jButtonBusOrdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 110, 40));
+
+        jTableBusOrdCompra.setBackground(new java.awt.Color(0, 0, 38));
+        jTableBusOrdCompra.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jTableBusOrdCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTableBusOrdCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jTableBusOrdCompra.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "N° ORDEN", "FECHA COMPRA", "FECHA ENTREGA", "RUC PROVEEDOR", "COSTO TOTAL", "DETALLE", "ESTADO"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableBusOrdCompra.setRowHeight(30);
+        jTableBusOrdCompra.setSelectionBackground(new java.awt.Color(228, 241, 254));
+        jTableBusOrdCompra.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jScrollPaneBusOrdCompra.setViewportView(jTableBusOrdCompra);
+
+        jPanelBaseBusOrdenCompra.add(jScrollPaneBusOrdCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 1070, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseBusOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBaseBusOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, 1153, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseBusOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBaseBusOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
@@ -114,9 +177,13 @@ public class FrmBuscarOrdenCompra extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanelBase;
+    private javax.swing.JButton jButtonBusOrdenCompra;
+    private javax.swing.JLabel jLabelBusOrdenCompra;
+    private javax.swing.JLabel jLabelNomProveedor;
     private javax.swing.JPanel jPanelBaseBusOrdenCompra;
-    private javax.swing.JPanel jPanelRetPrincipal;
     private javax.swing.JPanel jPanelRetPrincipal2;
+    public javax.swing.JScrollPane jScrollPaneBusOrdCompra;
+    public javax.swing.JTable jTableBusOrdCompra;
+    public javax.swing.JTextField jTextFieldNomProveedor;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,8 +16,9 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
      */
     public FrmRegistrarDatosProveedor() {
         initComponents();
-        setTitle("REGISTRAR DATOS DEL PROVEEDOR");
-        setSize(900, 644);
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
+        setSize(840, 590);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -32,10 +33,19 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
 
         jPanelBaseRegDatosProveedor = new javax.swing.JPanel();
         jPanelRetPrincipal4 = new javax.swing.JPanel();
+        jLabelRegDatProveedor = new javax.swing.JLabel();
+        jLabelRUC = new javax.swing.JLabel();
+        jTextFieldRUC = new javax.swing.JTextField();
+        jLabelDireccion = new javax.swing.JLabel();
+        jTextFieldDireccion = new javax.swing.JTextField();
+        jLabelEmpresa = new javax.swing.JLabel();
+        jTextFieldEmpresa = new javax.swing.JTextField();
+        jButtonBuscarRUC = new javax.swing.JButton();
+        jButtonGuardarDatProveedor1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBaseRegDatosProveedor.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBaseRegDatosProveedor.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBaseRegDatosProveedor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRetPrincipal4.setBackground(new java.awt.Color(0, 0, 51));
@@ -49,24 +59,68 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
         jPanelRetPrincipal4.setLayout(jPanelRetPrincipal4Layout);
         jPanelRetPrincipal4Layout.setHorizontalGroup(
             jPanelRetPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
         jPanelRetPrincipal4Layout.setVerticalGroup(
             jPanelRetPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        jPanelBaseRegDatosProveedor.add(jPanelRetPrincipal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 480, -1, -1));
+        jPanelBaseRegDatosProveedor.add(jPanelRetPrincipal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, 80, 60));
+
+        jLabelRegDatProveedor.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabelRegDatProveedor.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelRegDatProveedor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelRegDatProveedor.setText("REGISTRAR DATOS DEL PROVEEDOR");
+        jPanelBaseRegDatosProveedor.add(jLabelRegDatProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 520, 50));
+
+        jLabelRUC.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        jLabelRUC.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelRUC.setText("RUC:");
+        jPanelBaseRegDatosProveedor.add(jLabelRUC, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 90, 20));
+
+        jTextFieldRUC.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldRUC.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldRUC.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegDatosProveedor.add(jTextFieldRUC, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 240, 40));
+
+        jLabelDireccion.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        jLabelDireccion.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelDireccion.setText("DIRECCIÓN:");
+        jPanelBaseRegDatosProveedor.add(jLabelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 150, 20));
+
+        jTextFieldDireccion.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldDireccion.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldDireccion.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegDatosProveedor.add(jTextFieldDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 560, 40));
+
+        jLabelEmpresa.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        jLabelEmpresa.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelEmpresa.setText("EMPRESA:");
+        jPanelBaseRegDatosProveedor.add(jLabelEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 100, 20));
+
+        jTextFieldEmpresa.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldEmpresa.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldEmpresa.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegDatosProveedor.add(jTextFieldEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 560, 40));
+
+        jButtonBuscarRUC.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonBuscarRUC.setText("BUSCAR");
+        jPanelBaseRegDatosProveedor.add(jButtonBuscarRUC, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 110, 40));
+
+        jButtonGuardarDatProveedor1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonGuardarDatProveedor1.setText("GUARDAR");
+        jPanelBaseRegDatosProveedor.add(jButtonGuardarDatProveedor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 110, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseRegDatosProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
+            .addComponent(jPanelBaseRegDatosProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 825, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseRegDatosProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
+            .addComponent(jPanelBaseRegDatosProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -115,7 +169,16 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBuscarRUC;
+    private javax.swing.JButton jButtonGuardarDatProveedor1;
+    private javax.swing.JLabel jLabelDireccion;
+    private javax.swing.JLabel jLabelEmpresa;
+    private javax.swing.JLabel jLabelRUC;
+    private javax.swing.JLabel jLabelRegDatProveedor;
     private javax.swing.JPanel jPanelBaseRegDatosProveedor;
     private javax.swing.JPanel jPanelRetPrincipal4;
+    public javax.swing.JTextField jTextFieldDireccion;
+    public javax.swing.JTextField jTextFieldEmpresa;
+    public javax.swing.JTextField jTextFieldRUC;
     // End of variables declaration//GEN-END:variables
 }

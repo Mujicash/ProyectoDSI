@@ -16,8 +16,9 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
      */
     public FrmRegistrarOrdenCompra() {
         initComponents();
-        setTitle("REGISTRAR ORDEN DE COMPRA");
-        setSize(905, 665);
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
+        setSize(990, 660);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -32,10 +33,27 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
 
         jPanelBaseRegOrdenCompra = new javax.swing.JPanel();
         jPanelRetPrincipal6 = new javax.swing.JPanel();
+        jLabelRegOrdenCompra = new javax.swing.JLabel();
+        jLabelPrecioCompra = new javax.swing.JLabel();
+        jTextFieldPrecCompra = new javax.swing.JTextField();
+        jButtonGuardar = new javax.swing.JButton();
+        jLabelCodProducto = new javax.swing.JLabel();
+        jTextFieldCodProducto = new javax.swing.JTextField();
+        jLabelEmpresa = new javax.swing.JLabel();
+        jTextFieldCantidad = new javax.swing.JTextField();
+        jLabelCantidad = new javax.swing.JLabel();
+        JComboEmpresa = new javax.swing.JComboBox<>();
+        jScrollPaneRegOrdCompra = new javax.swing.JScrollPane();
+        jTableOrdCompra = new javax.swing.JTable();
+        jLabelTotal = new javax.swing.JLabel();
+        jTextFieldTotal = new javax.swing.JTextField();
+        jPanelEliminar = new javax.swing.JPanel();
+        jPanelEditar = new javax.swing.JPanel();
+        jButtonBusProducto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBaseRegOrdenCompra.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBaseRegOrdenCompra.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBaseRegOrdenCompra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRetPrincipal6.setBackground(new java.awt.Color(0, 0, 51));
@@ -49,27 +67,178 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
         jPanelRetPrincipal6.setLayout(jPanelRetPrincipal6Layout);
         jPanelRetPrincipal6Layout.setHorizontalGroup(
             jPanelRetPrincipal6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
         jPanelRetPrincipal6Layout.setVerticalGroup(
             jPanelRetPrincipal6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        jPanelBaseRegOrdenCompra.add(jPanelRetPrincipal6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 490, -1, -1));
+        jPanelBaseRegOrdenCompra.add(jPanelRetPrincipal6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 560, 40, 40));
+
+        jLabelRegOrdenCompra.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabelRegOrdenCompra.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelRegOrdenCompra.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelRegOrdenCompra.setText("REGISTRAR ORDEN DE COMPRA");
+        jPanelBaseRegOrdenCompra.add(jLabelRegOrdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 470, -1));
+
+        jLabelPrecioCompra.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelPrecioCompra.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelPrecioCompra.setText("PRECIO COMPRA:");
+        jPanelBaseRegOrdenCompra.add(jLabelPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 150, -1));
+
+        jTextFieldPrecCompra.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldPrecCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldPrecCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldPrecCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPrecCompraActionPerformed(evt);
+            }
+        });
+        jPanelBaseRegOrdenCompra.add(jTextFieldPrecCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 120, 40));
+
+        jButtonGuardar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonGuardar.setText("GUARDAR");
+        jPanelBaseRegOrdenCompra.add(jButtonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 560, 110, 40));
+
+        jLabelCodProducto.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelCodProducto.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelCodProducto.setText("CÓDIGO PRODUCTO:");
+        jPanelBaseRegOrdenCompra.add(jLabelCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, 180, -1));
+
+        jTextFieldCodProducto.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldCodProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegOrdenCompra.add(jTextFieldCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, 160, 40));
+
+        jLabelEmpresa.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelEmpresa.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelEmpresa.setText("EMPRESA:");
+        jPanelBaseRegOrdenCompra.add(jLabelEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 100, -1));
+
+        jTextFieldCantidad.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldCantidad.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldCantidad.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldCantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCantidadActionPerformed(evt);
+            }
+        });
+        jPanelBaseRegOrdenCompra.add(jTextFieldCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 120, 40));
+
+        jLabelCantidad.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelCantidad.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelCantidad.setText("CANTIDAD:");
+        jPanelBaseRegOrdenCompra.add(jLabelCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 120, -1));
+
+        JComboEmpresa.setBackground(new java.awt.Color(0, 0, 38));
+        JComboEmpresa.setEditable(true);
+        JComboEmpresa.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        JComboEmpresa.setForeground(new java.awt.Color(255, 255, 255));
+        JComboEmpresa.setAutoscrolls(true);
+        JComboEmpresa.setBorder(null);
+        JComboEmpresa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        JComboEmpresa.setName(""); // NOI18N
+        JComboEmpresa.setOpaque(false);
+        jPanelBaseRegOrdenCompra.add(JComboEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 440, 40));
+
+        jTableOrdCompra.setBackground(new java.awt.Color(0, 0, 38));
+        jTableOrdCompra.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jTableOrdCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTableOrdCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jTableOrdCompra.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "CANTIDAD", "NOMBRE", "COSTO UNITARIO", "TOTAL"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableOrdCompra.setRowHeight(30);
+        jTableOrdCompra.setSelectionBackground(new java.awt.Color(228, 241, 254));
+        jTableOrdCompra.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jScrollPaneRegOrdCompra.setViewportView(jTableOrdCompra);
+
+        jPanelBaseRegOrdenCompra.add(jScrollPaneRegOrdCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 700, 240));
+
+        jLabelTotal.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelTotal.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelTotal.setText("TOTAL:");
+        jPanelBaseRegOrdenCompra.add(jLabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, 70, -1));
+
+        jTextFieldTotal.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldTotal.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldTotal.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTotalActionPerformed(evt);
+            }
+        });
+        jPanelBaseRegOrdenCompra.add(jTextFieldTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 560, 190, 40));
+
+        jPanelEliminar.setBackground(new java.awt.Color(204, 0, 0));
+
+        javax.swing.GroupLayout jPanelEliminarLayout = new javax.swing.GroupLayout(jPanelEliminar);
+        jPanelEliminar.setLayout(jPanelEliminarLayout);
+        jPanelEliminarLayout.setHorizontalGroup(
+            jPanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        jPanelEliminarLayout.setVerticalGroup(
+            jPanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        jPanelBaseRegOrdenCompra.add(jPanelEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 320, 30, 30));
+
+        jPanelEditar.setBackground(new java.awt.Color(0, 102, 51));
+
+        javax.swing.GroupLayout jPanelEditarLayout = new javax.swing.GroupLayout(jPanelEditar);
+        jPanelEditar.setLayout(jPanelEditarLayout);
+        jPanelEditarLayout.setHorizontalGroup(
+            jPanelEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        jPanelEditarLayout.setVerticalGroup(
+            jPanelEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        jPanelBaseRegOrdenCompra.add(jPanelEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 320, -1, -1));
+
+        jButtonBusProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonBusProducto.setText("BUSCAR");
+        jPanelBaseRegOrdenCompra.add(jButtonBusProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 110, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelBaseRegOrdenCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 882, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelBaseRegOrdenCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelBaseRegOrdenCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 615, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelBaseRegOrdenCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -81,6 +250,18 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
         ret6.setVisible(true);
         dispose();
     }//GEN-LAST:event_jPanelRetPrincipal6MouseClicked
+
+    private void jTextFieldPrecCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecCompraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPrecCompraActionPerformed
+
+    private void jTextFieldCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCantidadActionPerformed
+
+    private void jTextFieldTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTotalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,7 +300,24 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JComboBox<String> JComboEmpresa;
+    private javax.swing.JButton jButtonBusProducto;
+    private javax.swing.JButton jButtonGuardar;
+    private javax.swing.JLabel jLabelCantidad;
+    private javax.swing.JLabel jLabelCodProducto;
+    private javax.swing.JLabel jLabelEmpresa;
+    private javax.swing.JLabel jLabelPrecioCompra;
+    private javax.swing.JLabel jLabelRegOrdenCompra;
+    private javax.swing.JLabel jLabelTotal;
     private javax.swing.JPanel jPanelBaseRegOrdenCompra;
+    private javax.swing.JPanel jPanelEditar;
+    private javax.swing.JPanel jPanelEliminar;
     private javax.swing.JPanel jPanelRetPrincipal6;
+    public javax.swing.JScrollPane jScrollPaneRegOrdCompra;
+    public javax.swing.JTable jTableOrdCompra;
+    public javax.swing.JTextField jTextFieldCantidad;
+    public javax.swing.JTextField jTextFieldCodProducto;
+    public javax.swing.JTextField jTextFieldPrecCompra;
+    public javax.swing.JTextField jTextFieldTotal;
     // End of variables declaration//GEN-END:variables
 }

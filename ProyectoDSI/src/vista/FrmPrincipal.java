@@ -16,7 +16,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
      */
     public FrmPrincipal() {
         initComponents();
-        setTitle("INVENTARIO BOTICA CRUZ DE MAYO - JAUJA");
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
         setSize(834, 615);
         setResizable(false);
         setLocationRelativeTo(null);
@@ -51,7 +51,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(228, 241, 254));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelCentral.setBackground(new java.awt.Color(255, 255, 255));
@@ -64,7 +64,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jLabelNomBotica.setText("CRUZ DE MAYO");
         jPanelCentral.add(jLabelNomBotica, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 380, 40));
 
-        jPanelBotRegistrarOrdenCompra.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotRegistrarOrdenCompra.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotRegistrarOrdenCompra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotRegistrarOrdenCompraMouseClicked(evt);
@@ -80,7 +80,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotRegistrarOrdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 320, 40));
 
-        jPanelBotRegistrarOrdenSalida.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotRegistrarOrdenSalida.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotRegistrarOrdenSalida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotRegistrarOrdenSalidaMouseClicked(evt);
@@ -96,7 +96,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotRegistrarOrdenSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 320, 40));
 
-        jPanelBotRegistrarDatosProveedor.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotRegistrarDatosProveedor.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotRegistrarDatosProveedor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotRegistrarDatosProveedorMouseClicked(evt);
@@ -112,7 +112,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotRegistrarDatosProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 320, 40));
 
-        jPanelBotRegistrarDatosProducto.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotRegistrarDatosProducto.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotRegistrarDatosProducto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotRegistrarDatosProductoMouseClicked(evt);
@@ -128,7 +128,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotRegistrarDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 320, 40));
 
-        jPanelBotBuscarProducto.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotBuscarProducto.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotBuscarProducto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotBuscarProductoMouseClicked(evt);
@@ -144,7 +144,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotBuscarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 320, 40));
 
-        jPanelBotRegistrarGuiaRemision.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotRegistrarGuiaRemision.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotRegistrarGuiaRemision.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotRegistrarGuiaRemisionMouseClicked(evt);
@@ -160,7 +160,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotRegistrarGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 320, 40));
 
-        jPanelBotBuscarOrdenCompra.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBotBuscarOrdenCompra.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBotBuscarOrdenCompra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanelBotBuscarOrdenCompraMouseClicked(evt);
