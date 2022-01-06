@@ -16,8 +16,9 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
      */
     public FrmRegistrarOrdenSalida() {
         initComponents();
-        setTitle("REGISTRAR ORDEN DE SALIDA");
-        setSize(906, 653);
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
+        setSize(943, 670);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -32,10 +33,26 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
 
         jPanelBaseRegOrdenSalida = new javax.swing.JPanel();
         jPanelRetPrincipal7 = new javax.swing.JPanel();
+        jLabelRegDatProducto = new javax.swing.JLabel();
+        jLabelCodProducto = new javax.swing.JLabel();
+        jTextFieldCodProducto = new javax.swing.JTextField();
+        jButtonBusCodProducto = new javax.swing.JButton();
+        jLabelCantProducto = new javax.swing.JLabel();
+        jTextFieldCantProducto = new javax.swing.JTextField();
+        jButtonFinalizar = new javax.swing.JButton();
+        jLabelMotSalida = new javax.swing.JLabel();
+        jTextFieldMotSalida = new javax.swing.JTextField();
+        jButtonCrearBoleta = new javax.swing.JButton();
+        jButtonDescartar = new javax.swing.JButton();
+        jButtonAñadirCantProducto = new javax.swing.JButton();
+        jScrollRegOrdSalida = new javax.swing.JScrollPane();
+        jTableRegOrdSalida = new javax.swing.JTable();
+        jPanelEliminar = new javax.swing.JPanel();
+        jPanelEditar = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBaseRegOrdenSalida.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBaseRegOrdenSalida.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBaseRegOrdenSalida.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRetPrincipal7.setBackground(new java.awt.Color(0, 0, 51));
@@ -49,24 +66,146 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
         jPanelRetPrincipal7.setLayout(jPanelRetPrincipal7Layout);
         jPanelRetPrincipal7Layout.setHorizontalGroup(
             jPanelRetPrincipal7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
         jPanelRetPrincipal7Layout.setVerticalGroup(
             jPanelRetPrincipal7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        jPanelBaseRegOrdenSalida.add(jPanelRetPrincipal7, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 480, -1, -1));
+        jPanelBaseRegOrdenSalida.add(jPanelRetPrincipal7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 560, 60, 50));
+
+        jLabelRegDatProducto.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabelRegDatProducto.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelRegDatProducto.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelRegDatProducto.setText("REGISTRAR ORDEN DE SALIDA");
+        jPanelBaseRegOrdenSalida.add(jLabelRegDatProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 430, -1));
+
+        jLabelCodProducto.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelCodProducto.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelCodProducto.setText("CÓDIGO PRODUCTO");
+        jPanelBaseRegOrdenSalida.add(jLabelCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 190, -1));
+
+        jTextFieldCodProducto.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldCodProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegOrdenSalida.add(jTextFieldCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 190, 40));
+
+        jButtonBusCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonBusCodProducto.setText("BUSCAR");
+        jPanelBaseRegOrdenSalida.add(jButtonBusCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 110, 40));
+
+        jLabelCantProducto.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelCantProducto.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelCantProducto.setText("CANTIDAD PRODUCTO");
+        jPanelBaseRegOrdenSalida.add(jLabelCantProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 190, -1));
+
+        jTextFieldCantProducto.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldCantProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldCantProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegOrdenSalida.add(jTextFieldCantProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 190, 40));
+
+        jButtonFinalizar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonFinalizar.setText("FINALIZAR");
+        jPanelBaseRegOrdenSalida.add(jButtonFinalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 560, 120, 40));
+
+        jLabelMotSalida.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelMotSalida.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelMotSalida.setText("MOTIVO SALIDA");
+        jPanelBaseRegOrdenSalida.add(jLabelMotSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 150, -1));
+
+        jTextFieldMotSalida.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldMotSalida.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldMotSalida.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseRegOrdenSalida.add(jTextFieldMotSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 190, 40));
+
+        jButtonCrearBoleta.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonCrearBoleta.setText("CREAR BOLETA");
+        jPanelBaseRegOrdenSalida.add(jButtonCrearBoleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 150, 40));
+
+        jButtonDescartar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonDescartar.setText("DESCARTAR");
+        jPanelBaseRegOrdenSalida.add(jButtonDescartar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 560, 120, 40));
+
+        jButtonAñadirCantProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonAñadirCantProducto.setText("AÑADIR");
+        jPanelBaseRegOrdenSalida.add(jButtonAñadirCantProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 110, 40));
+
+        jTableRegOrdSalida.setBackground(new java.awt.Color(0, 0, 38));
+        jTableRegOrdSalida.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jTableRegOrdSalida.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTableRegOrdSalida.setForeground(new java.awt.Color(255, 255, 255));
+        jTableRegOrdSalida.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "CANTIDAD", "NOMBRE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableRegOrdSalida.setRowHeight(30);
+        jTableRegOrdSalida.setSelectionBackground(new java.awt.Color(228, 241, 254));
+        jTableRegOrdSalida.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jScrollRegOrdSalida.setViewportView(jTableRegOrdSalida);
+
+        jPanelBaseRegOrdenSalida.add(jScrollRegOrdSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 630, 240));
+
+        jPanelEliminar.setBackground(new java.awt.Color(204, 0, 0));
+
+        javax.swing.GroupLayout jPanelEliminarLayout = new javax.swing.GroupLayout(jPanelEliminar);
+        jPanelEliminar.setLayout(jPanelEliminarLayout);
+        jPanelEliminarLayout.setHorizontalGroup(
+            jPanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        jPanelEliminarLayout.setVerticalGroup(
+            jPanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        jPanelBaseRegOrdenSalida.add(jPanelEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 30, 30));
+
+        jPanelEditar.setBackground(new java.awt.Color(0, 102, 51));
+
+        javax.swing.GroupLayout jPanelEditarLayout = new javax.swing.GroupLayout(jPanelEditar);
+        jPanelEditar.setLayout(jPanelEditarLayout);
+        jPanelEditarLayout.setHorizontalGroup(
+            jPanelEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        jPanelEditarLayout.setVerticalGroup(
+            jPanelEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        jPanelBaseRegOrdenSalida.add(jPanelEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 320, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseRegOrdenSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBaseRegOrdenSalida, javax.swing.GroupLayout.DEFAULT_SIZE, 918, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseRegOrdenSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBaseRegOrdenSalida, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
         );
 
         pack();
@@ -114,7 +253,23 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAñadirCantProducto;
+    private javax.swing.JButton jButtonBusCodProducto;
+    private javax.swing.JButton jButtonCrearBoleta;
+    private javax.swing.JButton jButtonDescartar;
+    private javax.swing.JButton jButtonFinalizar;
+    private javax.swing.JLabel jLabelCantProducto;
+    private javax.swing.JLabel jLabelCodProducto;
+    private javax.swing.JLabel jLabelMotSalida;
+    private javax.swing.JLabel jLabelRegDatProducto;
     private javax.swing.JPanel jPanelBaseRegOrdenSalida;
+    private javax.swing.JPanel jPanelEditar;
+    private javax.swing.JPanel jPanelEliminar;
     private javax.swing.JPanel jPanelRetPrincipal7;
+    public javax.swing.JScrollPane jScrollRegOrdSalida;
+    public javax.swing.JTable jTableRegOrdSalida;
+    public javax.swing.JTextField jTextFieldCantProducto;
+    public javax.swing.JTextField jTextFieldCodProducto;
+    public javax.swing.JTextField jTextFieldMotSalida;
     // End of variables declaration//GEN-END:variables
 }

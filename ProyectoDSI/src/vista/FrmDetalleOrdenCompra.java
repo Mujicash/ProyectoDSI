@@ -16,8 +16,9 @@ public class FrmDetalleOrdenCompra extends javax.swing.JFrame {
      */
     public FrmDetalleOrdenCompra() {
         initComponents();
-        setTitle("DETALLE DE ORDEN DE COMPRA");
-        setSize(964, 649);
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
+        setSize(1040, 577);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -32,10 +33,15 @@ public class FrmDetalleOrdenCompra extends javax.swing.JFrame {
 
         jPanelBaseDetOrdenCompra = new javax.swing.JPanel();
         jPanelRetBuscarOdenCompra = new javax.swing.JPanel();
+        jScrollPaneDetOrdCompra = new javax.swing.JScrollPane();
+        jTableDetOrdCompra = new javax.swing.JTable();
+        jButtonEditar = new javax.swing.JButton();
+        jLabelDetOrdenCompra = new javax.swing.JLabel();
+        jButtonGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBaseDetOrdenCompra.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBaseDetOrdenCompra.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBaseDetOrdenCompra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRetBuscarOdenCompra.setBackground(new java.awt.Color(0, 0, 51));
@@ -49,24 +55,74 @@ public class FrmDetalleOrdenCompra extends javax.swing.JFrame {
         jPanelRetBuscarOdenCompra.setLayout(jPanelRetBuscarOdenCompraLayout);
         jPanelRetBuscarOdenCompraLayout.setHorizontalGroup(
             jPanelRetBuscarOdenCompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
         jPanelRetBuscarOdenCompraLayout.setVerticalGroup(
             jPanelRetBuscarOdenCompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        jPanelBaseDetOrdenCompra.add(jPanelRetBuscarOdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, -1, -1));
+        jPanelBaseDetOrdenCompra.add(jPanelRetBuscarOdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 470, 50, 40));
+
+        jTableDetOrdCompra.setBackground(new java.awt.Color(0, 0, 38));
+        jTableDetOrdCompra.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jTableDetOrdCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTableDetOrdCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jTableDetOrdCompra.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "CÓDIGO", "NOMBRE PRODUCTO", "CANTIDAD", "COSTO C/U", "PRECIO TOTAL", "FECHA VENC"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableDetOrdCompra.setRowHeight(32);
+        jTableDetOrdCompra.setSelectionBackground(new java.awt.Color(228, 241, 254));
+        jTableDetOrdCompra.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jScrollPaneDetOrdCompra.setViewportView(jTableDetOrdCompra);
+
+        jPanelBaseDetOrdenCompra.add(jScrollPaneDetOrdCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 920, 340));
+
+        jButtonEditar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonEditar.setText("EDITAR");
+        jPanelBaseDetOrdenCompra.add(jButtonEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 50, -1, -1));
+
+        jLabelDetOrdenCompra.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabelDetOrdenCompra.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelDetOrdenCompra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelDetOrdenCompra.setText("DETALLE ORDEN DE COMPRA");
+        jPanelBaseDetOrdenCompra.add(jLabelDetOrdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+
+        jButtonGuardar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonGuardar.setText("GUARDAR");
+        jPanelBaseDetOrdenCompra.add(jButtonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 50, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseDetOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBaseDetOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseDetOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBaseDetOrdenCompra, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
         );
 
         pack();
@@ -114,7 +170,12 @@ public class FrmDetalleOrdenCompra extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonEditar;
+    private javax.swing.JButton jButtonGuardar;
+    private javax.swing.JLabel jLabelDetOrdenCompra;
     private javax.swing.JPanel jPanelBaseDetOrdenCompra;
     private javax.swing.JPanel jPanelRetBuscarOdenCompra;
+    public javax.swing.JScrollPane jScrollPaneDetOrdCompra;
+    public javax.swing.JTable jTableDetOrdCompra;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,8 +16,9 @@ public class FrmBuscarProducto extends javax.swing.JFrame {
      */
     public FrmBuscarProducto() {
         initComponents();
-        setTitle("BUSCAR PRODUCTO");
-        setSize(920, 666);
+        setTitle("BOTICA CRUZ DE MAYO - JAUJA");
+        setSize(1180, 666);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -32,10 +33,19 @@ public class FrmBuscarProducto extends javax.swing.JFrame {
 
         jPanelBaseBusProducto = new javax.swing.JPanel();
         jPanelRetPrincipal2 = new javax.swing.JPanel();
+        jLabelRegDatProducto = new javax.swing.JLabel();
+        jLabelCodigo = new javax.swing.JLabel();
+        jTextFieldCodigo = new javax.swing.JTextField();
+        jTextFieldNomProducto = new javax.swing.JTextField();
+        jLabelNomProducto = new javax.swing.JLabel();
+        jButtonBusNomProducto = new javax.swing.JButton();
+        jButtonBusCodProducto = new javax.swing.JButton();
+        jScrollPaneBusProducto = new javax.swing.JScrollPane();
+        jTableBusProducto = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelBaseBusProducto.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBaseBusProducto.setBackground(new java.awt.Color(228, 241, 254));
         jPanelBaseBusProducto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelRetPrincipal2.setBackground(new java.awt.Color(0, 0, 51));
@@ -49,20 +59,92 @@ public class FrmBuscarProducto extends javax.swing.JFrame {
         jPanelRetPrincipal2.setLayout(jPanelRetPrincipal2Layout);
         jPanelRetPrincipal2Layout.setHorizontalGroup(
             jPanelRetPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
         jPanelRetPrincipal2Layout.setVerticalGroup(
             jPanelRetPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        jPanelBaseBusProducto.add(jPanelRetPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 520, 80, 70));
+        jPanelBaseBusProducto.add(jPanelRetPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 550, 60, 50));
+
+        jLabelRegDatProducto.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabelRegDatProducto.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelRegDatProducto.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelRegDatProducto.setText("BUSCAR PRODUCTO");
+        jPanelBaseBusProducto.add(jLabelRegDatProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 390, -1));
+
+        jLabelCodigo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelCodigo.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelCodigo.setText("CÓDIGO PRODUCTO:");
+        jPanelBaseBusProducto.add(jLabelCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 260, -1));
+
+        jTextFieldCodigo.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldCodigo.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseBusProducto.add(jTextFieldCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 190, 40));
+
+        jTextFieldNomProducto.setBackground(new java.awt.Color(0, 0, 38));
+        jTextFieldNomProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldNomProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseBusProducto.add(jTextFieldNomProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 320, 40));
+
+        jLabelNomProducto.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelNomProducto.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelNomProducto.setText("NOMBRE PRODUCTO:");
+        jPanelBaseBusProducto.add(jLabelNomProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 260, -1));
+
+        jButtonBusNomProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonBusNomProducto.setText("BUSCAR");
+        jPanelBaseBusProducto.add(jButtonBusNomProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, 110, 40));
+
+        jButtonBusCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonBusCodProducto.setText("BUSCAR");
+        jPanelBaseBusProducto.add(jButtonBusCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 110, 40));
+
+        jTableBusProducto.setBackground(new java.awt.Color(0, 0, 38));
+        jTableBusProducto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jTableBusProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTableBusProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jTableBusProducto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "N° ORDEN", "FECHA COMPRA", "FECHA ENTREGA", "RUC PROVEEDOR", "COSTO TOTAL"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableBusProducto.setRowHeight(30);
+        jTableBusProducto.setSelectionBackground(new java.awt.Color(228, 241, 254));
+        jTableBusProducto.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jScrollPaneBusProducto.setViewportView(jTableBusProducto);
+
+        jPanelBaseBusProducto.add(jScrollPaneBusProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 1070, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBaseBusProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelBaseBusProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 1165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +196,16 @@ public class FrmBuscarProducto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBusCodProducto;
+    private javax.swing.JButton jButtonBusNomProducto;
+    private javax.swing.JLabel jLabelCodigo;
+    private javax.swing.JLabel jLabelNomProducto;
+    private javax.swing.JLabel jLabelRegDatProducto;
     private javax.swing.JPanel jPanelBaseBusProducto;
     private javax.swing.JPanel jPanelRetPrincipal2;
+    public javax.swing.JScrollPane jScrollPaneBusProducto;
+    public javax.swing.JTable jTableBusProducto;
+    public javax.swing.JTextField jTextFieldCodigo;
+    public javax.swing.JTextField jTextFieldNomProducto;
     // End of variables declaration//GEN-END:variables
 }

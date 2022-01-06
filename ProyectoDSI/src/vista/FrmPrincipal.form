@@ -36,7 +36,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+          <Color blue="fe" green="f1" red="e4" type="rgb"/>
         </Property>
       </Properties>
 
@@ -83,7 +83,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotRegistrarOrdenCompra">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -121,7 +121,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotRegistrarOrdenSalida">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -159,7 +159,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotRegistrarDatosProveedor">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -197,7 +197,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotRegistrarDatosProducto">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -235,7 +235,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotBuscarProducto">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -273,7 +273,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotRegistrarGuiaRemision">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -311,7 +311,7 @@
             <Container class="javax.swing.JPanel" name="jPanelBotBuscarOrdenCompra">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                  <Color blue="fe" green="f1" red="e4" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
