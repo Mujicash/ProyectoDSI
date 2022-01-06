@@ -10,6 +10,13 @@ public class FrmLogin extends javax.swing.JFrame {
     
     public FrmLogin() {
         initComponents();
+        setTitle("INVENTARIO BOTICA CRUZ DE MAYO - JAUJA");
+        this.setSize(920, 615);
+        setResizable(false);
+        
+        
+       setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -21,21 +28,80 @@ public class FrmLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelBase = new javax.swing.JPanel();
+        jPanelCentral = new javax.swing.JPanel();
+        jLabelNomBotica = new javax.swing.JLabel();
+        jLabelNomContraseña = new javax.swing.JLabel();
+        jLabelNomUsuario = new javax.swing.JLabel();
+        jTextFieldUsuario = new javax.swing.JTextField();
+        jPasswordFieldContraseña = new javax.swing.JPasswordField();
+        jPanelBotonIngresar = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanelBase.setBackground(new java.awt.Color(204, 204, 255));
+        jPanelBase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelCentral.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelNomBotica.setBackground(new java.awt.Color(204, 204, 255));
+        jLabelNomBotica.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabelNomBotica.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelNomBotica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelNomBotica.setText("CRUZ DE MAYO");
+        jPanelCentral.add(jLabelNomBotica, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 380, 40));
+
+        jLabelNomContraseña.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabelNomContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelNomContraseña.setText("CONTRASEÑA:");
+        jPanelCentral.add(jLabelNomContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 160, 30));
+
+        jLabelNomUsuario.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabelNomUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelNomUsuario.setText("USUARIO:");
+        jPanelCentral.add(jLabelNomUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 160, 30));
+        jPanelCentral.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 330, 40));
+        jPanelCentral.add(jPasswordFieldContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 330, 40));
+
+        jPanelBotonIngresar.setBackground(new java.awt.Color(0, 5, 25));
+        jPanelBotonIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelBotonIngresarMouseClicked(evt);
+            }
+        });
+        jPanelBotonIngresar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("INGRESAR");
+        jPanelBotonIngresar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, 142, 28));
+
+        jPanelCentral.add(jPanelBotonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 180, 40));
+
+        jPanelBase.add(jPanelCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 400, 440));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanelBase, javax.swing.GroupLayout.DEFAULT_SIZE, 907, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanelBase, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanelBotonIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelBotonIngresarMouseClicked
+        FrmPrincipal principal = new FrmPrincipal();
+        principal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanelBotonIngresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -73,5 +139,14 @@ public class FrmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelNomBotica;
+    private javax.swing.JLabel jLabelNomContraseña;
+    private javax.swing.JLabel jLabelNomUsuario;
+    private javax.swing.JPanel jPanelBase;
+    private javax.swing.JPanel jPanelBotonIngresar;
+    private javax.swing.JPanel jPanelCentral;
+    private javax.swing.JPasswordField jPasswordFieldContraseña;
+    private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }
