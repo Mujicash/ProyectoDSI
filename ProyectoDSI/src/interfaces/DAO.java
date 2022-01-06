@@ -8,6 +8,7 @@ package interfaces;
  */
 public interface DAO<T> {
     
+    
     public boolean create(T t);
     
     public T read(int id);
