@@ -13,9 +13,9 @@ import java.util.logging.Logger;
  */
 public class Conexion {
     
-    private static String login = "";
-    private static String clave = "";
-    private static String url = "";
+    private static final String LOGIN = "";
+    private static final String CLAVE = "";
+    private static final String URL = "";
     
     private static Conexion instance; //Singleton
     private Connection conn;
@@ -23,7 +23,7 @@ public class Conexion {
     private Conexion(){
         try {
             Class.forName("com.mysql.jdbc.Driver"); //driver
-            conn = DriverManager.getConnection(url, login, clave);
+            conn = DriverManager.getConnection(URL, LOGIN, CLAVE);
             
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
