@@ -84,6 +84,7 @@ public class FrmRegistrarDatosProducto extends javax.swing.JFrame {
         jTextFieldCodigo.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldCodigo.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldCodigo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProducto.add(jTextFieldCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 240, 40));
 
         jLabelNombre.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
@@ -94,6 +95,7 @@ public class FrmRegistrarDatosProducto extends javax.swing.JFrame {
         jTextFieldNombre.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldNombre.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProducto.add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 240, 40));
 
         jLabelPeso.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
@@ -104,6 +106,7 @@ public class FrmRegistrarDatosProducto extends javax.swing.JFrame {
         jTextFieldPeso.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldPeso.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldPeso.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldPeso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProducto.add(jTextFieldPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 150, 120, 40));
 
         jLabelPrecioVenta.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
@@ -114,6 +117,7 @@ public class FrmRegistrarDatosProducto extends javax.swing.JFrame {
         jTextFieldPrecioVenta.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldPrecioVenta.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldPrecioVenta.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldPrecioVenta.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProducto.add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 240, 40));
 
         jLabelMarca.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
@@ -124,6 +128,7 @@ public class FrmRegistrarDatosProducto extends javax.swing.JFrame {
         jTextFieldMarca.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldMarca.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldMarca.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldMarca.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProducto.add(jTextFieldMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 290, 40));
 
         jButtonGuardarDatProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N

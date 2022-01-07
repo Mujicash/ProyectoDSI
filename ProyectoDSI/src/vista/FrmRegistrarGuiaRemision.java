@@ -5,6 +5,9 @@
  */
 package vista;
 
+import javax.swing.UIManager;
+
+
 /**
  *
  * @author USER
@@ -20,6 +23,27 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         setSize(1068, 569);
         setResizable(false);
         setLocationRelativeTo(null);
+        exploradorColor();
+        
+    }
+    
+    public void exploradorColor(){//para color formato Windows10
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FrmRegistrarGuiaRemision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FrmRegistrarGuiaRemision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FrmRegistrarGuiaRemision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmRegistrarGuiaRemision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -36,18 +60,22 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         jLabelRegGuiaRemision = new javax.swing.JLabel();
         jLabelNumOrdCompra = new javax.swing.JLabel();
         jTextFieldNumOrdCompra = new javax.swing.JTextField();
-        jButtonGuardarGuiaRemision = new javax.swing.JButton();
+        jButtonSubirGuiaRemision = new javax.swing.JButton();
         jLabelProveedor = new javax.swing.JLabel();
         jTextFieldPunPartida = new javax.swing.JTextField();
         jLabelPunPartida = new javax.swing.JLabel();
         JComboBoxProveedor = new javax.swing.JComboBox<>();
-        jLabelNumGuiaRemision = new javax.swing.JLabel();
+        jLabelNombreArchivo = new javax.swing.JLabel();
         jTextFieldNumGuiaRemision = new javax.swing.JTextField();
         jLabelMotTraslado = new javax.swing.JLabel();
         jTextFieldMotTraslado = new javax.swing.JTextField();
         jLabelFechaIniTraslado = new javax.swing.JLabel();
         jTextFieldFechaIniTraslado = new javax.swing.JTextField();
         jButtonBusGuiaRemision = new javax.swing.JButton();
+        jPanelGuiaRemision = new javax.swing.JPanel();
+        jButtonGuardarGuiaRemision = new javax.swing.JButton();
+        JTestFieldNomArchivo = new javax.swing.JTextField();
+        jLabelNumGuiaRemision = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,16 +116,17 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         jTextFieldNumOrdCompra.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldNumOrdCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldNumOrdCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldNumOrdCompra.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegGuiaRemision.add(jTextFieldNumOrdCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 180, 40));
 
-        jButtonGuardarGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jButtonGuardarGuiaRemision.setText("GUARDAR");
-        jButtonGuardarGuiaRemision.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSubirGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonSubirGuiaRemision.setText("SUBIR GUÍA REMISIÓN");
+        jButtonSubirGuiaRemision.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGuardarGuiaRemisionActionPerformed(evt);
+                jButtonSubirGuiaRemisionActionPerformed(evt);
             }
         });
-        jPanelBaseRegGuiaRemision.add(jButtonGuardarGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 110, 40));
+        jPanelBaseRegGuiaRemision.add(jButtonSubirGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 380, 330, 40));
 
         jLabelProveedor.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabelProveedor.setForeground(new java.awt.Color(0, 0, 51));
@@ -107,6 +136,7 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         jTextFieldPunPartida.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldPunPartida.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldPunPartida.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldPunPartida.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegGuiaRemision.add(jTextFieldPunPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 180, 40));
 
         jLabelPunPartida.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -115,9 +145,8 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         jPanelBaseRegGuiaRemision.add(jLabelPunPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 160, -1));
 
         JComboBoxProveedor.setBackground(new java.awt.Color(0, 0, 38));
-        JComboBoxProveedor.setEditable(true);
-        JComboBoxProveedor.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        JComboBoxProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        JComboBoxProveedor.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        JComboBoxProveedor.setForeground(new java.awt.Color(0, 0, 0));
         JComboBoxProveedor.setAutoscrolls(true);
         JComboBoxProveedor.setBorder(null);
         JComboBoxProveedor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -125,14 +154,15 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         JComboBoxProveedor.setOpaque(false);
         jPanelBaseRegGuiaRemision.add(JComboBoxProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 320, 40));
 
-        jLabelNumGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabelNumGuiaRemision.setForeground(new java.awt.Color(0, 0, 51));
-        jLabelNumGuiaRemision.setText("N° GUÍA REMISIÓN");
-        jPanelBaseRegGuiaRemision.add(jLabelNumGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 190, -1));
+        jLabelNombreArchivo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelNombreArchivo.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelNombreArchivo.setText("NOMBRE:");
+        jPanelBaseRegGuiaRemision.add(jLabelNombreArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 88, 80, 30));
 
         jTextFieldNumGuiaRemision.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldNumGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldNumGuiaRemision.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldNumGuiaRemision.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegGuiaRemision.add(jTextFieldNumGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 180, 40));
 
         jLabelMotTraslado.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -143,6 +173,7 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         jTextFieldMotTraslado.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldMotTraslado.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldMotTraslado.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldMotTraslado.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegGuiaRemision.add(jTextFieldMotTraslado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 320, 40));
 
         jLabelFechaIniTraslado.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -153,6 +184,7 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         jTextFieldFechaIniTraslado.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldFechaIniTraslado.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldFechaIniTraslado.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldFechaIniTraslado.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegGuiaRemision.add(jTextFieldFechaIniTraslado, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 180, 40));
 
         jButtonBusGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -163,6 +195,46 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
             }
         });
         jPanelBaseRegGuiaRemision.add(jButtonBusGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 110, 40));
+
+        javax.swing.GroupLayout jPanelGuiaRemisionLayout = new javax.swing.GroupLayout(jPanelGuiaRemision);
+        jPanelGuiaRemision.setLayout(jPanelGuiaRemisionLayout);
+        jPanelGuiaRemisionLayout.setHorizontalGroup(
+            jPanelGuiaRemisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 330, Short.MAX_VALUE)
+        );
+        jPanelGuiaRemisionLayout.setVerticalGroup(
+            jPanelGuiaRemisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 240, Short.MAX_VALUE)
+        );
+
+        jPanelBaseRegGuiaRemision.add(jPanelGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, 330, 240));
+
+        jButtonGuardarGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jButtonGuardarGuiaRemision.setText("GUARDAR");
+        jButtonGuardarGuiaRemision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGuardarGuiaRemisionActionPerformed(evt);
+            }
+        });
+        jPanelBaseRegGuiaRemision.add(jButtonGuardarGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 110, 40));
+
+        JTestFieldNomArchivo.setEditable(false);
+        JTestFieldNomArchivo.setBackground(new java.awt.Color(0, 0, 38));
+        JTestFieldNomArchivo.setFont(new java.awt.Font("Sitka Text", 1, 20)); // NOI18N
+        JTestFieldNomArchivo.setForeground(new java.awt.Color(255, 255, 255));
+        JTestFieldNomArchivo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        JTestFieldNomArchivo.setBorder(null);
+        JTestFieldNomArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTestFieldNomArchivoActionPerformed(evt);
+            }
+        });
+        jPanelBaseRegGuiaRemision.add(JTestFieldNomArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, 240, 40));
+
+        jLabelNumGuiaRemision.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabelNumGuiaRemision.setForeground(new java.awt.Color(0, 0, 51));
+        jLabelNumGuiaRemision.setText("N° GUÍA REMISIÓN");
+        jPanelBaseRegGuiaRemision.add(jLabelNumGuiaRemision, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 190, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -184,13 +256,21 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jPanelRetPrincipal5MouseClicked
 
-    private void jButtonGuardarGuiaRemisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarGuiaRemisionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonGuardarGuiaRemisionActionPerformed
+    private void jButtonSubirGuiaRemisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubirGuiaRemisionActionPerformed
+        
+    }//GEN-LAST:event_jButtonSubirGuiaRemisionActionPerformed
 
     private void jButtonBusGuiaRemisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBusGuiaRemisionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonBusGuiaRemisionActionPerformed
+
+    private void jButtonGuardarGuiaRemisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarGuiaRemisionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGuardarGuiaRemisionActionPerformed
+
+    private void JTestFieldNomArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTestFieldNomArchivoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTestFieldNomArchivoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,16 +309,20 @@ public class FrmRegistrarGuiaRemision extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> JComboBoxProveedor;
+    public javax.swing.JTextField JTestFieldNomArchivo;
     private javax.swing.JButton jButtonBusGuiaRemision;
     private javax.swing.JButton jButtonGuardarGuiaRemision;
+    private javax.swing.JButton jButtonSubirGuiaRemision;
     private javax.swing.JLabel jLabelFechaIniTraslado;
     private javax.swing.JLabel jLabelMotTraslado;
+    private javax.swing.JLabel jLabelNombreArchivo;
     private javax.swing.JLabel jLabelNumGuiaRemision;
     private javax.swing.JLabel jLabelNumOrdCompra;
     private javax.swing.JLabel jLabelProveedor;
     private javax.swing.JLabel jLabelPunPartida;
     private javax.swing.JLabel jLabelRegGuiaRemision;
     private javax.swing.JPanel jPanelBaseRegGuiaRemision;
+    private javax.swing.JPanel jPanelGuiaRemision;
     private javax.swing.JPanel jPanelRetPrincipal5;
     public javax.swing.JTextField jTextFieldFechaIniTraslado;
     public javax.swing.JTextField jTextFieldMotTraslado;

@@ -82,6 +82,7 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
         jTextFieldRUC.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldRUC.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldRUC.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldRUC.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProveedor.add(jTextFieldRUC, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 240, 40));
 
         jLabelDireccion.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
@@ -92,6 +93,7 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
         jTextFieldDireccion.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldDireccion.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldDireccion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldDireccion.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProveedor.add(jTextFieldDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 560, 40));
 
         jLabelEmpresa.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
@@ -102,6 +104,7 @@ public class FrmRegistrarDatosProveedor extends javax.swing.JFrame {
         jTextFieldEmpresa.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldEmpresa.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldEmpresa.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldEmpresa.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegDatosProveedor.add(jTextFieldEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 560, 40));
 
         jButtonBuscarRUC.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
