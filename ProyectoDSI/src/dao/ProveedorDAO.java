@@ -104,11 +104,11 @@ public class ProveedorDAO {
         return null;
     }
 
-    public static ProveedorDTO buscarRUC(String RUC) {
+    public static ProveedorDTO buscarRUC(String ruc) {
         String sql = "SELECT * FROM tbl_proveedor WHERE nombre=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setString(1, RUC);
+            pst.setString(1, ruc);
             ResultSet rst = pst.executeQuery();
             if (rst.next()) {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
