@@ -68,6 +68,7 @@ public class FrmBuscarOrdenCompra extends javax.swing.JFrame {
         jTextFieldNomProveedor.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldNomProveedor.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldNomProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldNomProveedor.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseBusOrdenCompra.add(jTextFieldNomProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 440, 40));
 
         jLabelBusOrdenCompra.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N

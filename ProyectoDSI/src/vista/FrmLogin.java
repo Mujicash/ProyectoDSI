@@ -1,6 +1,8 @@
 
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author André Mujica
@@ -53,16 +55,24 @@ public class FrmLogin extends javax.swing.JFrame {
         jLabelNomBotica.setText("CRUZ DE MAYO");
         jPanelCentral.add(jLabelNomBotica, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 380, 40));
 
-        jLabelNomContraseña.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabelNomContraseña.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
         jLabelNomContraseña.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNomContraseña.setText("CONTRASEÑA:");
         jPanelCentral.add(jLabelNomContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 160, 30));
 
-        jLabelNomUsuario.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabelNomUsuario.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
         jLabelNomUsuario.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNomUsuario.setText("USUARIO:");
         jPanelCentral.add(jLabelNomUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 160, 30));
+
+        jTextFieldUsuario.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jTextFieldUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanelCentral.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 330, 40));
+
+        jPasswordFieldContraseña.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jPasswordFieldContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        jPasswordFieldContraseña.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanelCentral.add(jPasswordFieldContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 330, 40));
 
         jPanelBotonIngresar.setBackground(new java.awt.Color(0, 5, 25));
@@ -98,9 +108,20 @@ public class FrmLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanelBotonIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelBotonIngresarMouseClicked
-        FrmPrincipal principal = new FrmPrincipal();
-        principal.setVisible(true);
-        dispose();
+//        String usuario = "POR DEFINIR";
+//        String contraseña = "POR DEFINIR";
+//        
+//        String Pass = new String(jPasswordFieldContraseña.getPassword());
+//        
+//        if(jTextFieldUsuario.getText().equals(usuario)&& Pass.equals(contra)){
+            FrmPrincipal principal = new FrmPrincipal(); 
+            principal.setVisible(true); 
+            dispose(); 
+//        }
+//        else{
+//            
+//            JOptionPane.showMessageDialog(this, "Usuario / Contraseña incorrecta"); 
+//        }
     }//GEN-LAST:event_jPanelBotonIngresarMouseClicked
 
     /**

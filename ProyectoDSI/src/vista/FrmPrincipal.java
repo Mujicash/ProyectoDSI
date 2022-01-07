@@ -17,7 +17,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     public FrmPrincipal() {
         initComponents();
         setTitle("BOTICA CRUZ DE MAYO - JAUJA");
-        setSize(834, 615);
+        setSize(1070, 650);
         setResizable(false);
         setLocationRelativeTo(null);
     }
@@ -176,17 +176,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanelCentral.add(jPanelBotBuscarOrdenCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 320, 40));
 
-        jPanel1.add(jPanelCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 440, 460));
+        jPanel1.add(jPanelCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 440, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
         );
 
         pack();

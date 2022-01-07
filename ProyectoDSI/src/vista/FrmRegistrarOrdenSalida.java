@@ -47,8 +47,6 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
         jButtonAñadirCantProducto = new javax.swing.JButton();
         jScrollRegOrdSalida = new javax.swing.JScrollPane();
         jTableRegOrdSalida = new javax.swing.JTable();
-        jPanelEliminar = new javax.swing.JPanel();
-        jPanelEditar = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +87,7 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
         jTextFieldCodProducto.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldCodProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldCodProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegOrdenSalida.add(jTextFieldCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 190, 40));
 
         jButtonBusCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -103,6 +102,7 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
         jTextFieldCantProducto.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldCantProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldCantProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldCantProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseRegOrdenSalida.add(jTextFieldCantProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 190, 40));
 
         jButtonFinalizar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -112,16 +112,17 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
         jLabelMotSalida.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabelMotSalida.setForeground(new java.awt.Color(0, 0, 51));
         jLabelMotSalida.setText("MOTIVO SALIDA");
-        jPanelBaseRegOrdenSalida.add(jLabelMotSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 150, -1));
+        jPanelBaseRegOrdenSalida.add(jLabelMotSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 150, -1));
 
         jTextFieldMotSalida.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldMotSalida.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldMotSalida.setForeground(new java.awt.Color(255, 255, 255));
-        jPanelBaseRegOrdenSalida.add(jTextFieldMotSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 190, 40));
+        jTextFieldMotSalida.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jPanelBaseRegOrdenSalida.add(jTextFieldMotSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 190, 40));
 
         jButtonCrearBoleta.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jButtonCrearBoleta.setText("CREAR BOLETA");
-        jPanelBaseRegOrdenSalida.add(jButtonCrearBoleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 150, 40));
+        jPanelBaseRegOrdenSalida.add(jButtonCrearBoleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 150, 40));
 
         jButtonDescartar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jButtonDescartar.setText("DESCARTAR");
@@ -166,36 +167,6 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
         jScrollRegOrdSalida.setViewportView(jTableRegOrdSalida);
 
         jPanelBaseRegOrdenSalida.add(jScrollRegOrdSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 630, 240));
-
-        jPanelEliminar.setBackground(new java.awt.Color(204, 0, 0));
-
-        javax.swing.GroupLayout jPanelEliminarLayout = new javax.swing.GroupLayout(jPanelEliminar);
-        jPanelEliminar.setLayout(jPanelEliminarLayout);
-        jPanelEliminarLayout.setHorizontalGroup(
-            jPanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-        jPanelEliminarLayout.setVerticalGroup(
-            jPanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        jPanelBaseRegOrdenSalida.add(jPanelEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 30, 30));
-
-        jPanelEditar.setBackground(new java.awt.Color(0, 102, 51));
-
-        javax.swing.GroupLayout jPanelEditarLayout = new javax.swing.GroupLayout(jPanelEditar);
-        jPanelEditar.setLayout(jPanelEditarLayout);
-        jPanelEditarLayout.setHorizontalGroup(
-            jPanelEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-        jPanelEditarLayout.setVerticalGroup(
-            jPanelEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        jPanelBaseRegOrdenSalida.add(jPanelEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 320, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,8 +234,6 @@ public class FrmRegistrarOrdenSalida extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMotSalida;
     private javax.swing.JLabel jLabelRegDatProducto;
     private javax.swing.JPanel jPanelBaseRegOrdenSalida;
-    private javax.swing.JPanel jPanelEditar;
-    private javax.swing.JPanel jPanelEliminar;
     private javax.swing.JPanel jPanelRetPrincipal7;
     public javax.swing.JScrollPane jScrollRegOrdSalida;
     public javax.swing.JTable jTableRegOrdSalida;

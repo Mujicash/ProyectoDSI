@@ -82,11 +82,15 @@ public class FrmBuscarProducto extends javax.swing.JFrame {
         jTextFieldCodigo.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldCodigo.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldCodigo.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldCodigo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseBusProducto.add(jTextFieldCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 190, 40));
 
         jTextFieldNomProducto.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldNomProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldNomProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldNomProducto.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldNomProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanelBaseBusProducto.add(jTextFieldNomProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 320, 40));
 
         jLabelNomProducto.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
