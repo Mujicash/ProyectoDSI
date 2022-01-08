@@ -31,7 +31,7 @@ public class ProveedorDAO {
             pst.setString(4, nuevo.getDireccion());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.insertar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.insertar:\n" + ex);
         }
     }
 
@@ -50,7 +50,7 @@ public class ProveedorDAO {
             pst.setInt(5, modificado.getIdProveedor());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.modificar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.modificar:\n" + ex);
         }
     }
 
@@ -65,7 +65,7 @@ public class ProveedorDAO {
             pst.setInt(1, eliminar.getIdProveedor());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
         }
     }
 
@@ -84,7 +84,7 @@ public class ProveedorDAO {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
         }
         return null;
     }
@@ -99,7 +99,7 @@ public class ProveedorDAO {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
         }
         return null;
     }
@@ -114,7 +114,7 @@ public class ProveedorDAO {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
         }
         return null;
     }

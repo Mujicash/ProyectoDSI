@@ -1,7 +1,6 @@
 package dao;
 
 import conexion.Conexion;
-import dto.FabricanteDTO;
 import dto.TipoProductoDTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,7 +28,7 @@ public class TipoProductoDAO {
             pst.setString(1, nuevo.getFormato());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.insertar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.insertar:\n" + ex);
         }
     }
 
@@ -45,7 +44,7 @@ public class TipoProductoDAO {
             pst.setInt(2, modificado.getIdTipo());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.modificar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.modificar:\n" + ex);
         }
     }
 
@@ -60,7 +59,7 @@ public class TipoProductoDAO {
             pst.setInt(1, eliminar.getIdTipo());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.eliminar:\n" + ex);
         }
     }
 
@@ -79,7 +78,7 @@ public class TipoProductoDAO {
                 return new TipoProductoDTO(rst.getInt(1), rst.getString(2));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.eliminar:\n" + ex);
         }
         return null;
     }
@@ -94,7 +93,7 @@ public class TipoProductoDAO {
                 return new TipoProductoDTO(rst.getInt(1), rst.getString(2));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.eliminar:\n" + ex);
         }
         return null;
     }

@@ -31,7 +31,7 @@ public class OrdenSalidaDAO {
             pst.setInt(3, nuevo.getIdUsuario().getIdUsuario());//Posiblemente se cambiara a que defrente devuelva un int
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.insertar:\n" + ex);
+            System.err.println("Clase OrdenSalidaDAO.insertar:\n" + ex);
         }
     }
 
@@ -49,7 +49,7 @@ public class OrdenSalidaDAO {
             pst.setInt(4, modificado.getIdOrdenSalida());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.modificar:\n" + ex);
+            System.err.println("Clase OrdenSalidaDAO.modificar:\n" + ex);
         }
     }
 
@@ -64,7 +64,7 @@ public class OrdenSalidaDAO {
             pst.setInt(1, eliminar.getIdOrdenSalida());
             pst.executeUpdate();
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase OrdenSalidaDAO.eliminar:\n" + ex);
         }
     }
 
@@ -84,7 +84,7 @@ public class OrdenSalidaDAO {
                 return new OrdenSalidaDTO(rst.getInt(1), rst.getDate(2), rst.getString(3), rst.getInt(4));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase OrdenSalidaDAO.eliminar:\n" + ex);
         }
         return null;
     }
