@@ -1,6 +1,7 @@
 
 package vista;
 
+import conexion.Conexion;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +19,8 @@ public class FrmLogin extends javax.swing.JFrame {
         
         
        setLocationRelativeTo(null);
+       
+       Conexion.getInstance();
         
     }
 
