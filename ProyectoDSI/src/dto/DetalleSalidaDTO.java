@@ -7,36 +7,21 @@ package dto;
  */
 public class DetalleSalidaDTO {
     
-    //private int idOrdenSalida;
-    private OrdenSalidaDTO orden;
-    private ProductoDTO producto;
-    //private int idTipoProducto;
-    //private int idMedicamento;
+    private int idOrdenSalida;
+    //private OrdenSalidaDTO orden;
+    //private ProductoDTO producto;
+    private int idTipoProducto;
+    private int idMedicamento;
     private int cantidad;
 
     public DetalleSalidaDTO() {
     }
 
-    public DetalleSalidaDTO(OrdenSalidaDTO orden, ProductoDTO producto, int cantidad) {
-        this.orden = orden;
-        this.producto = producto;
+    public DetalleSalidaDTO(int idOrdenSalida, int idTipoProducto, int idMedicamento, int cantidad) {
+        this.idOrdenSalida = idOrdenSalida;
+        this.idTipoProducto = idTipoProducto;
+        this.idMedicamento = idMedicamento;
         this.cantidad = cantidad;
-    }
-
-    public OrdenSalidaDTO getOrden() {
-        return orden;
-    }
-
-    public void setOrden(OrdenSalidaDTO orden) {
-        this.orden = orden;
-    }
-
-    public ProductoDTO getProducto() {
-        return producto;
-    }
-
-    public void setProducto(ProductoDTO producto) {
-        this.producto = producto;
     }
 
     public int getCantidad() {
@@ -47,8 +32,28 @@ public class DetalleSalidaDTO {
         this.cantidad = cantidad;
     }
 
-    @Override
-    public String toString() {
-        return "DetalleSalidaDTO{" + "orden=" + orden + ", producto=" + producto + ", cantidad=" + cantidad + '}';
+    public int getIdOrdenSalida() {
+        return idOrdenSalida;
     }
+
+    public void setIdOrdenSalida(int idOrdenSalida) {
+        this.idOrdenSalida = idOrdenSalida;
+    }
+
+    public int getIdTipoProducto() {
+        return idTipoProducto;
+    }
+
+    public void setIdTipoProducto(int idTipoProducto) {
+        this.idTipoProducto = idTipoProducto;
+    }
+
+    public int getIdMedicamento() {
+        return idMedicamento;
+    }
+
+    public void setIdMedicamento(int idMedicamento) {
+        this.idMedicamento = idMedicamento;
+    }
+    
 }

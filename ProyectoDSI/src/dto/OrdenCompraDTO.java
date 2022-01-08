@@ -10,7 +10,7 @@ import java.util.Date;
 public class OrdenCompraDTO {
     
     private int idOrdenCompra;
-    private ProveedorDTO proveedor;
+    private int idProveedor;
     private Date fechaCompra;
     private Date fechaEntrega;
     private boolean estado;
@@ -22,9 +22,9 @@ public class OrdenCompraDTO {
         this.idOrdenCompra = idOrdenCompra;
     }
 
-    public OrdenCompraDTO(int idOrdenCompra, ProveedorDTO proveedor, Date fechaCompra, Date fechaEntrega, boolean estado) {
+    public OrdenCompraDTO(int idOrdenCompra, int idProveedor, Date fechaCompra, Date fechaEntrega, boolean estado) {
         this.idOrdenCompra = idOrdenCompra;
-        this.proveedor = proveedor;
+        this.idProveedor = idProveedor;
         this.fechaCompra = fechaCompra;
         this.fechaEntrega = fechaEntrega;
         this.estado = estado;
@@ -38,12 +38,12 @@ public class OrdenCompraDTO {
         this.idOrdenCompra = idOrdenCompra;
     }
 
-    public ProveedorDTO getProveedor() {
-        return proveedor;
+    public int getProveedor() {
+        return idProveedor;
     }
 
-    public void setProveedor(ProveedorDTO proveedor) {
-        this.proveedor = proveedor;
+    public void setProveedor(int idProveedor) {
+        this.idProveedor = idProveedor;
     }
 
     public Date getFechaCompra() {

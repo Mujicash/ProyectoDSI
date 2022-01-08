@@ -12,13 +12,13 @@ public class OrdenSalidaDTO {
     private int idOrdenSalida;
     private Date fecha;
     private String motivo;
-    private UsuarioDTO usuario;
+    private int idUsuario;
 
-    public OrdenSalidaDTO(int idOrdenSalida, Date fecha, String motivo, UsuarioDTO idUsuario) {
+    public OrdenSalidaDTO(int idOrdenSalida, Date fecha, String motivo, int idUsuario) {
         this.idOrdenSalida = idOrdenSalida;
         this.fecha = fecha;
         this.motivo = motivo;
-        this.usuario = idUsuario;
+        this.idUsuario = idUsuario;
     }
 
     public OrdenSalidaDTO(int idOrdenSalida) {
@@ -49,12 +49,12 @@ public class OrdenSalidaDTO {
         this.motivo = motivo;
     }
 
-    public UsuarioDTO getIdUsuario() {
-        return usuario;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setIdUsuario(UsuarioDTO idUsuario) {
-        this.usuario = idUsuario;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     @Override
