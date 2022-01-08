@@ -13,17 +13,21 @@ import java.util.logging.Logger;
  */
 public class Conexion {
     
-    private static final String LOGIN = "";
-    private static final String CLAVE = "";
-    private static final String URL = "";
+    private static final String SERVER = "sql10.freemysqlhosting.net";
+    private static final String NAME = "sql10464237";
+    private static final String USER = "sql10464237";
+    private static final String CLAVE = "cMDDiMeXzh";
+    private static final String URL = "jdbc:mysql://"+SERVER+"/"+NAME;
     
     private static Conexion instance; //Singleton
     private Connection conn;
     
     private Conexion(){
         try {
-            Class.forName("com.mysql.jdbc.Driver"); //driver
-            conn = DriverManager.getConnection(URL, LOGIN, CLAVE);
+            Class.forName("com.mysql.cj.jdbc.Driver"); //driver
+            conn = DriverManager.getConnection(URL, USER, CLAVE);
+            
+            System.out.println("conexion exitosa\n");
             
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
