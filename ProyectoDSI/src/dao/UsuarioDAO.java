@@ -6,8 +6,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+
 /**
- * 
+ *
  * @author Gianfranco
  */
 public class UsuarioDAO {
@@ -17,7 +18,7 @@ public class UsuarioDAO {
     }
 
     /**
-     * 
+     *
      * @param nuevo Usuario ha registrar en la base de datos
      */
     public static void insertar(UsuarioDTO nuevo) {
@@ -36,9 +37,9 @@ public class UsuarioDAO {
             System.err.println("Clase UsuarioDAO.insertar:\n" + ex);
         }
     }
-    
+
     /**
-     * 
+     *
      * @param nuevo Usuario ha modificar en la base de datos
      */
     public static void modificar(UsuarioDTO nuevo) {
@@ -58,14 +59,14 @@ public class UsuarioDAO {
     }
 
     /**
-     * 
-     * @param nuevo Usuario ha eliminar en la base de datos
+     *
+     * @param idUsuario Usuario ha eliminar en la base de datos
      */
-    public static void eliminar(UsuarioDTO nuevo) {//Quizas solo pedir la id
+    public static void eliminar(int idUsuario) {//Quizas solo pedir la id
         String sql = "DELETE FROM tbl_usuario WHERE id_usuario=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, nuevo.getIdUsuario());
+            pst.setInt(1, idUsuario);
             pst.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Clase UsuarioDAO.eliminar:\n" + ex);
@@ -73,7 +74,7 @@ public class UsuarioDAO {
     }
 
     /**
-     * 
+     *
      * @param username Nombre de usuario con el que se registro
      * @param password Contraseña con la que se registro
      */
@@ -84,10 +85,11 @@ public class UsuarioDAO {
             pst.setString(1, username);
             pst.setString(2, password);
             ResultSet rst = pst.executeQuery();
-            if(rst.next())
+            if (rst.next()) {
                 return new UsuarioDTO(rst.getInt(1), rst.getString(2), rst.getString(6), rst.getString(3), rst.getString(4), rst.getString(5), rst.getDate(7), rst.getDate(8), 0);
+            }
         } catch (SQLException ex) {
-            System.err.println("Clase UsuarioDAO.eliminar:\n" + ex);
+            System.err.println("Clase UsuarioDAO.buscar:\n" + ex);
         }
         return null;
     }

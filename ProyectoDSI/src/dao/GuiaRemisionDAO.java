@@ -2,8 +2,6 @@ package dao;
 
 import conexion.Conexion;
 import dto.GuiaRemisionDTO;
-import dto.OrdenSalidaDTO;
-import dto.ProveedorDTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -60,13 +58,13 @@ public class GuiaRemisionDAO {
 
     /**
      *
-     * @param eliminar Usuario ha eliminar en la base de datos
+     * @param idGuia Usuario ha eliminar en la base de datos
      */
-    public static void eliminar(GuiaRemisionDTO eliminar) {//Quizas solo pedir la id
+    public static void eliminar(int idGuia) {
         String sql = "DELETE FROM tbl_guia_remision WHERE id_guia=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, eliminar.getIdGuia());
+            pst.setInt(1, idGuia);
             pst.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Clase GuiaRemisionDAO.eliminar:\n" + ex);
@@ -75,20 +73,20 @@ public class GuiaRemisionDAO {
 
     /**
      *
-     * @param id ID con el que se registro el Fabricante
+     * @param idGuia ID con el que se registro el Fabricante
      * @return La guia de remision buscada
      */
-    public static GuiaRemisionDTO buscar(int id) {
+    public static GuiaRemisionDTO buscar(int idGuia) {
         String sql = "SELECT * FROM tbl_guia_remision WHERE id_guia=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, id);
+            pst.setInt(1, idGuia);
             ResultSet rst = pst.executeQuery();
             if (rst.next()) {
                 return new GuiaRemisionDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getDate(5), rst.getDate(6));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase GuiaRemisionDAO.eliminar:\n" + ex);
+            System.err.println("Clase GuiaRemisionDAO.buscar:\n" + ex);
         }
         return null;
     }

@@ -19,7 +19,7 @@ public class FabricanteDAO {
 
     /**
      *
-     * @param nuevo Usuario ha registrar en la base de datos
+     * @param nuevo DTO del Fabricante ha registrar en la base de datos
      */
     public static void insertar(FabricanteDTO nuevo) {
         String sql = "INSERT INTO tbl_fabricante(nombre) VALUES(?)";
@@ -34,7 +34,7 @@ public class FabricanteDAO {
 
     /**
      *
-     * @param modificado Usuario ha modificar en la base de datos
+     * @param modificado DTO del Fabricante ha modificar en la base de datos
      */
     public static void modificar(FabricanteDTO modificado) {
         String sql = "UPDATE tbl_fabricante SET nombre=? WHERE id_fabricante=?";
@@ -50,13 +50,13 @@ public class FabricanteDAO {
 
     /**
      *
-     * @param eliminar Usuario ha eliminar en la base de datos
+     * @param idFabricante ID del Fabricante ha eliminar en la base de datos
      */
-    public static void eliminar(FabricanteDTO eliminar) {//Quizas solo pedir la id
+    public static void eliminar(int idFabricante) {
         String sql = "DELETE FROM tbl_fabricante WHERE id_fabricante=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, eliminar.getIdFabricante());
+            pst.setInt(1, idFabricante);
             pst.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
@@ -65,20 +65,20 @@ public class FabricanteDAO {
 
     /**
      *
-     * @param id ID con el que se registro el Fabricante
+     * @param idFabricante ID del Fabricante ha eliminar en la base de datos
      * @return El DTO del fabricante
      */
-    public static FabricanteDTO buscar(int id) {
+    public static FabricanteDTO buscar(int idFabricante) {
         String sql = "SELECT * FROM tbl_fabricante WHERE id_fabricante=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, id);
+            pst.setInt(1, idFabricante);
             ResultSet rst = pst.executeQuery();
             if (rst.next()) {
                 return new FabricanteDTO(rst.getInt(1), rst.getString(2));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase FabricanteDAO.buscar:\n" + ex);
         }
         return null;
     }
@@ -93,7 +93,7 @@ public class FabricanteDAO {
                 return new FabricanteDTO(rst.getInt(1), rst.getString(2));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase FabricanteDAO.eliminar:\n" + ex);
+            System.err.println("Clase FabricanteDAO.buscar:\n" + ex);
         }
         return null;
     }

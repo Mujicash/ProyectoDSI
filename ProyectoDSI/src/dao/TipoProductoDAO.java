@@ -50,13 +50,13 @@ public class TipoProductoDAO {
 
     /**
      *
-     * @param eliminar Usuario ha eliminar en la base de datos
+     * @param idTipoProducto Usuario ha eliminar en la base de datos
      */
-    public static void eliminar(TipoProductoDTO eliminar) {//Quizas solo pedir la id
+    public static void eliminar(int idTipoProducto) {
         String sql = "DELETE FROM tbl_tipo WHERE id_tipo=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, eliminar.getIdTipo());
+            pst.setInt(1, idTipoProducto);
             pst.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Clase TipoProductoDAO.eliminar:\n" + ex);
@@ -65,20 +65,20 @@ public class TipoProductoDAO {
 
     /**
      *
-     * @param id ID con el que se registro el Fabricante
+     * @param idTipoProducto ID con el que se registro el Fabricante
      * @return El DTO del fabricante
      */
-    public static TipoProductoDTO buscar(int id) {
+    public static TipoProductoDTO buscar(int idTipoProducto) {
         String sql = "SELECT * FROM tbl_tipo WHERE id_tipo=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, id);
+            pst.setInt(1, idTipoProducto);
             ResultSet rst = pst.executeQuery();
             if (rst.next()) {
                 return new TipoProductoDTO(rst.getInt(1), rst.getString(2));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase TipoProductoDAO.eliminar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.buscar:\n" + ex);
         }
         return null;
     }
@@ -93,7 +93,7 @@ public class TipoProductoDAO {
                 return new TipoProductoDTO(rst.getInt(1), rst.getString(2));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase TipoProductoDAO.eliminar:\n" + ex);
+            System.err.println("Clase TipoProductoDAO.buscar:\n" + ex);
         }
         return null;
     }

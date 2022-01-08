@@ -56,13 +56,13 @@ public class ProveedorDAO {
 
     /**
      *
-     * @param eliminar Usuario ha eliminar en la base de datos
+     * @param idProveedor Usuario ha eliminar en la base de datos
      */
-    public static void eliminar(ProveedorDTO eliminar) {//Quizas solo pedir la id
+    public static void eliminar(int idProveedor) {
         String sql = "DELETE FROM tbl_proveedor WHERE id_proveedor=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, eliminar.getIdProveedor());
+            pst.setInt(1, idProveedor);
             pst.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
@@ -71,20 +71,20 @@ public class ProveedorDAO {
 
     /**
      *
-     * @param id ID con el que se registro el Fabricante
+     * @param idProveedor ID con el que se registro el Fabricante
      * @return El DTO del fabricante
      */
-    public static ProveedorDTO buscar(int id) {
+    public static ProveedorDTO buscar(int idProveedor) {
         String sql = "SELECT * FROM tbl_proveedor WHERE id_proveedor=?";
         Connection conn = Conexion.getInstance().getConn();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
-            pst.setInt(1, id);
+            pst.setInt(1, idProveedor);
             ResultSet rst = pst.executeQuery();
             if (rst.next()) {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.buscar:\n" + ex);
         }
         return null;
     }
@@ -99,7 +99,7 @@ public class ProveedorDAO {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.buscar:\n" + ex);
         }
         return null;
     }
@@ -114,7 +114,7 @@ public class ProveedorDAO {
                 return new ProveedorDTO(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4), rst.getString(5));
             }
         } catch (SQLException ex) {
-            System.err.println("Clase ProveedorDAO.eliminar:\n" + ex);
+            System.err.println("Clase ProveedorDAO.buscar:\n" + ex);
         }
         return null;
     }
