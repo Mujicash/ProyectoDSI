@@ -7,40 +7,40 @@ package dto;
  */
 public class DetalleCompraDTO {
     
-    private OrdenCompraDTO orden;
-    private MedicamentoDTO medicamento;
+    private int idOrdenCompra;
+    private int idMedicamento;
     private int unidades;
     private float precio;
 
     public DetalleCompraDTO() {
     }
 
-    public DetalleCompraDTO(OrdenCompraDTO orden, MedicamentoDTO medicamento) {
-        this.orden = orden;
-        this.medicamento = medicamento;
+    public DetalleCompraDTO(int idOrdenCompra, int idMedicamento) {
+        this.idOrdenCompra = idOrdenCompra;
+        this.idMedicamento = idMedicamento;
     }
 
-    public DetalleCompraDTO(OrdenCompraDTO orden, MedicamentoDTO medicamento, int unidades, float precio) {
-        this.orden = orden;
-        this.medicamento = medicamento;
+    public DetalleCompraDTO(int idOrdenCompra, int idMedicamento, int unidades, float precio) {
+        this.idOrdenCompra = idOrdenCompra;
+        this.idMedicamento = idMedicamento;
         this.unidades = unidades;
         this.precio = precio;
     }
 
-    public OrdenCompraDTO getOrden() {
-        return orden;
+    public int getIdOrdenCompra() {
+        return idOrdenCompra;
     }
 
-    public void setOrden(OrdenCompraDTO orden) {
-        this.orden = orden;
+    public void setIdOrdenCompra(int idOrdenCompra) {
+        this.idOrdenCompra = idOrdenCompra;
     }
 
-    public MedicamentoDTO getMedicamento() {
-        return medicamento;
+    public int getIdMedicamento() {
+        return idMedicamento;
     }
 
-    public void setMedicamento(MedicamentoDTO medicamento) {
-        this.medicamento = medicamento;
+    public void setIdMedicamento(int idMedicamento) {
+        this.idMedicamento = idMedicamento;
     }
 
     public int getUnidades() {
@@ -61,6 +61,6 @@ public class DetalleCompraDTO {
 
     @Override
     public String toString() {
-        return "DetalleCompraDTO{" + "orden=" + orden + ", medicamento=" + medicamento + ", unidades=" + unidades + ", precio=" + precio + '}';
+        return "DetalleCompraDTO{" + "orden=" + idOrdenCompra + ", medicamento=" + idMedicamento + ", unidades=" + unidades + ", precio=" + precio + '}';
     }
 }
