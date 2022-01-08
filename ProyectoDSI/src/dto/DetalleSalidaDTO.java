@@ -1,4 +1,3 @@
-
 package dto;
 
 /**
@@ -6,7 +5,7 @@ package dto;
  * @author andre
  */
 public class DetalleSalidaDTO {
-    
+
     private int idOrdenSalida;
     //private OrdenSalidaDTO orden;
     //private ProductoDTO producto;
@@ -55,5 +54,5 @@ public class DetalleSalidaDTO {
     public void setIdMedicamento(int idMedicamento) {
         this.idMedicamento = idMedicamento;
     }
-    
+
 }
