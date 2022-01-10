@@ -24,7 +24,7 @@ public class TipoUsuarioDAO {
      */
     public static void insertar(TipoUsuarioDTO nuevo) {//La tabla es tipo
         String sql = "INSERT INTO tbl_tipo_usuario(categoria) VALUES(?)";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, nuevo.getTipo());
             pst.executeUpdate();
@@ -39,7 +39,7 @@ public class TipoUsuarioDAO {
      */
     public static void modificar(TipoUsuarioDTO modificado) {
         String sql = "UPDATE tbl_tipo_usuario SET categoria=? WHERE id_tipo=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, modificado.getTipo());
             pst.setInt(2, modificado.getIdTipoUsuario());
@@ -55,7 +55,7 @@ public class TipoUsuarioDAO {
      */
     public static void eliminar(int idTipoUsuario) {
         String sql = "DELETE FROM tbl_tipo_usuario WHERE id_tipo=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, idTipoUsuario);
             pst.executeUpdate();
@@ -71,7 +71,7 @@ public class TipoUsuarioDAO {
      */
     public static TipoUsuarioDTO buscar(int idTipoUsuario) {
         String sql = "SELECT * FROM tbl_tipo_usuario WHERE id_tipo=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, idTipoUsuario);
             ResultSet rst = pst.executeQuery();
@@ -86,7 +86,7 @@ public class TipoUsuarioDAO {
 
     public static TipoUsuarioDTO buscar(String formato) {
         String sql = "SELECT * FROM tbl_tipo_usuario WHERE categoria=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, formato);
             ResultSet rst = pst.executeQuery();

@@ -23,7 +23,7 @@ public class FabricanteDAO {
      */
     public static void insertar(FabricanteDTO nuevo) {
         String sql = "INSERT INTO tbl_fabricante(nombre) VALUES(?)";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, nuevo.getNombre());
             pst.executeUpdate();
@@ -38,7 +38,7 @@ public class FabricanteDAO {
      */
     public static void modificar(FabricanteDTO modificado) {
         String sql = "UPDATE tbl_fabricante SET nombre=? WHERE id_fabricante=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, modificado.getNombre());
             pst.setInt(2, modificado.getIdFabricante());
@@ -54,7 +54,7 @@ public class FabricanteDAO {
      */
     public static void eliminar(int idFabricante) {
         String sql = "DELETE FROM tbl_fabricante WHERE id_fabricante=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, idFabricante);
             pst.executeUpdate();
@@ -70,7 +70,7 @@ public class FabricanteDAO {
      */
     public static FabricanteDTO buscar(int idFabricante) {
         String sql = "SELECT * FROM tbl_fabricante WHERE id_fabricante=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, idFabricante);
             ResultSet rst = pst.executeQuery();
@@ -85,7 +85,7 @@ public class FabricanteDAO {
 
     public static FabricanteDTO buscar(String nombre) {
         String sql = "SELECT * FROM tbl_fabricante WHERE nombre=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, nombre);
             ResultSet rst = pst.executeQuery();
