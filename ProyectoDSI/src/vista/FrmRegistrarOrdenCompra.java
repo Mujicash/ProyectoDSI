@@ -88,7 +88,7 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
         jTextFieldPrecCompra.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldPrecCompra.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldPrecCompra.setForeground(new java.awt.Color(255, 255, 255));
-        jTextFieldPrecCompra.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextFieldPrecCompra.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextFieldPrecCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecCompraActionPerformed(evt);
@@ -108,7 +108,7 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
         jTextFieldCodProducto.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldCodProducto.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldCodProducto.setForeground(new java.awt.Color(255, 255, 255));
-        jTextFieldCodProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextFieldCodProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanelBaseRegOrdenCompra.add(jTextFieldCodProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, 160, 40));
 
         jLabelEmpresa.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -119,7 +119,7 @@ public class FrmRegistrarOrdenCompra extends javax.swing.JFrame {
         jTextFieldCantidad.setBackground(new java.awt.Color(0, 0, 38));
         jTextFieldCantidad.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jTextFieldCantidad.setForeground(new java.awt.Color(255, 255, 255));
-        jTextFieldCantidad.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextFieldCantidad.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextFieldCantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCantidadActionPerformed(evt);

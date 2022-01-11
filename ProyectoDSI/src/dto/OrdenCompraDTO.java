@@ -1,13 +1,15 @@
 
 package dto;
 
+import dao.DetalleCompraDAO;
 import java.util.Date;
+import interfaces.Orden;
 
 /**
  *
  * @author andre
  */
-public class OrdenCompraDTO {
+public class OrdenCompraDTO implements Orden {
     
     private int idOrdenCompra;
     private int idProveedor;
@@ -28,6 +30,12 @@ public class OrdenCompraDTO {
         this.fechaCompra = fechaCompra;
         this.fechaEntrega = fechaEntrega;
         this.estado = estado;
+    }
+
+    public OrdenCompraDTO(int idProveedor, Date fechaCompra, Date fechaEntrega) {
+        this.idProveedor = idProveedor;
+        this.fechaCompra = fechaCompra;
+        this.fechaEntrega = fechaEntrega;
     }
 
     public int getIdOrdenCompra() {
@@ -73,6 +81,24 @@ public class OrdenCompraDTO {
     @Override
     public String toString() {
         return "OrdenCompraDTO{" + "idOrdenCompra=" + idOrdenCompra + ", fechaCompra=" + fechaCompra + ", fechaEntrega=" + fechaEntrega + ", estado=" + estado + '}';
+    }
+
+   @Override
+    public String generarDetalle(Object[][] datos) {
+        boolean insert = false;
+        
+        for (Object[] dato : datos) {
+            DetalleCompraDTO detalle = new DetalleCompraDTO(this.idOrdenCompra, (Integer) dato[0], (Integer) dato[1], (Double) dato[2]);
+            insert = DetalleCompraDAO.insertar(detalle);
+        }
+        
+        if(insert){
+            return "Detalle Orden de Compra generado correctamente.";
+        }
+        else{
+            return "Error al generar el Detalle Orden de Compra.";
+        }
+
     }
     
 }

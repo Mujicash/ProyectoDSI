@@ -10,7 +10,7 @@ public class DetalleCompraDTO {
     private int idOrdenCompra;
     private int idMedicamento;
     private int unidades;
-    private float precio;
+    private double precio;
 
     public DetalleCompraDTO() {
     }
@@ -20,7 +20,7 @@ public class DetalleCompraDTO {
         this.idMedicamento = idMedicamento;
     }
 
-    public DetalleCompraDTO(int idOrdenCompra, int idMedicamento, int unidades, float precio) {
+    public DetalleCompraDTO(int idOrdenCompra, int idMedicamento, int unidades, double precio) {
         this.idOrdenCompra = idOrdenCompra;
         this.idMedicamento = idMedicamento;
         this.unidades = unidades;
@@ -51,11 +51,11 @@ public class DetalleCompraDTO {
         this.unidades = unidades;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
