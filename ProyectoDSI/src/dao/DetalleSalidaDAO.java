@@ -20,8 +20,9 @@ public class DetalleSalidaDAO {
     /**
      *
      * @param nuevo DTO del Detalle de salida ha registrar en la base de datos
+     * @return 
      */
-    public static void insertar(DetalleSalidaDTO nuevo) {
+    public static boolean insertar(DetalleSalidaDTO nuevo) {
         String sql = "INSERT INTO tbl_detalle_salida(id_orden,id_tipo,id_medicamento,cantidad) VALUES(?,?,?,?)";
         Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
@@ -29,10 +30,15 @@ public class DetalleSalidaDAO {
             pst.setInt(2, nuevo.getIdTipoProducto());
             pst.setInt(3, nuevo.getIdMedicamento());
             pst.setInt(4, nuevo.getCantidad());
-            pst.executeUpdate();
+            
+            if(pst.executeUpdate() > 0){
+                return true;
+            }
         } catch (SQLException ex) {
             System.err.println("Clase DetalleSalidaDAO.insertar:\n" + ex);
         }
+        
+        return false;
     }
 
     /**

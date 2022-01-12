@@ -20,19 +20,24 @@ public class DetalleCompraDAO {
     /**
      *
      * @param nuevo DTO del Detalle de compra ha registrar en la base de datos
+     * @return 
      */
-    public static void insertar(DetalleCompraDTO nuevo) {
+    public static boolean insertar(DetalleCompraDTO nuevo) {
         String sql = "INSERT INTO tbl_detalle_compra(id_orden,id_medicamento,unidades,precio) VALUES(?,?,?,?)";
         Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, nuevo.getIdOrdenCompra());
             pst.setInt(2, nuevo.getIdMedicamento());
             pst.setInt(3, nuevo.getUnidades());
-            pst.setFloat(4, nuevo.getPrecio());
-            pst.executeUpdate();
+            pst.setDouble(4, nuevo.getPrecio());
+            if(pst.executeUpdate() > 0){
+                return true;
+            }
         } catch (SQLException ex) {
             System.err.println("Clase DetalleCompraDAO.insertar:\n" + ex);
         }
+        
+        return false;
     }
 
     /**
@@ -44,7 +49,7 @@ public class DetalleCompraDAO {
         Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, modificado.getUnidades());
-            pst.setFloat(2, modificado.getPrecio());
+            pst.setDouble(2, modificado.getPrecio());
             pst.setInt(3, modificado.getIdOrdenCompra());
             pst.setInt(4, modificado.getIdMedicamento());
             pst.executeUpdate();

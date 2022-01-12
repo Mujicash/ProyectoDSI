@@ -7,8 +7,7 @@ package interfaces;
  * @param <T>
  */
 public interface DAO<T> {
-    
-    
+        
     public boolean create(T t);
     
     public T read(int id);
