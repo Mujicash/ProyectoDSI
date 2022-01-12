@@ -23,7 +23,7 @@ public class UsuarioDAO {
      */
     public static void insertar(UsuarioDTO nuevo) {
         String sql = "INSERT INTO tbl_usuario(usuario,nombre,apellido_pat,apellido_mat,pasword,fecha_creacion,ultima_conexion,tipo) VALUES(?,?,?,?,?,?,?,?)";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, nuevo.getUsername());
             pst.setString(2, nuevo.getNombres());
@@ -45,7 +45,7 @@ public class UsuarioDAO {
      */
     public static void modificar(UsuarioDTO nuevo) {
         String sql = "UPDATE tbl_usuario SET usuario=?,nombre=?,apellido_pat=?,apellido_mat=?,pasword=?,ultima_conexion=?,tipo=? WHERE id_usuario=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, nuevo.getUsername());
             pst.setString(2, nuevo.getNombres());
@@ -67,7 +67,7 @@ public class UsuarioDAO {
      */
     public static void eliminar(int idUsuario) {//Quizas solo pedir la id
         String sql = "DELETE FROM tbl_usuario WHERE id_usuario=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setInt(1, idUsuario);
             pst.executeUpdate();
@@ -83,7 +83,7 @@ public class UsuarioDAO {
      */
     public static UsuarioDTO buscar(String username, String password) {
         String sql = "SELECT * FROM tbl_usuario WHERE usuario=? AND pasword=?";
-        Connection conn = Conexion.getInstance().getConn();
+        Connection conn = Conexion.getInstance();
         try ( PreparedStatement pst = conn.prepareStatement(sql)) {
             pst.setString(1, username);
             pst.setString(2, password);
