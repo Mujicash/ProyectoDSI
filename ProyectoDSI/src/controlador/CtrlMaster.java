@@ -16,7 +16,7 @@ public class CtrlMaster {
     private ControlStrategy ctrl;
 
     public CtrlMaster() {
-        //Inicialmente se debe establer el ControlStrategy por el setCtrl()
+        //Inicialmente se debe establecer el ControlStrategy por el setCtrl()
     }
 
     public void setCtrl(ControlStrategy ctrl) {

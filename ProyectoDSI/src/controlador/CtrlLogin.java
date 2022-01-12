@@ -43,6 +43,7 @@ public class CtrlLogin implements MouseListener, ControlStrategy {
     @Override
     public void cerrar() {
         this.vista.dispose();
+        this.ctrl = null;
     }
 
     @Override
@@ -52,7 +53,7 @@ public class CtrlLogin implements MouseListener, ControlStrategy {
             UsuarioDTO user = UsuarioDAO.buscar(this.vista.jTextFieldUsuario.getText(), String.valueOf(this.vista.jPasswordFieldContraseña.getPassword()));
             if (user != null) {
                 this.vista.dispose();
-                if(this.ctrl==null){
+                if (this.ctrl == null) {
                     System.out.println("Es null");
                 }
                 this.ctrl.visualizar(new CtrlPrincipal(this.ctrl));

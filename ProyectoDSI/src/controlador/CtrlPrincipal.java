@@ -47,6 +47,7 @@ public class CtrlPrincipal implements MouseListener, ControlStrategy {
     @Override
     public void cerrar() {
         this.vista.dispose();
+        this.ctrl = null;
     }
 
     @Override
